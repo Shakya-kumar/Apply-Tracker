@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f6f0; color: #17211c; font-family: Arial, Helvetica, sans-serif; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.auth-grid { background-image: radial-gradient(#7e97811a 1px, transparent 1px); background-size: 18px 18px; }
+.focus-ring:focus-visible { outline: 3px solid #9ecb52; outline-offset: 3px; }
+@layer components {
+  .form-panel { @apply rounded-[24px] border border-[#e4e8df] bg-white p-5 sm:p-7; }
+  .input { @apply focus-ring mt-2 h-11 w-full rounded-xl border border-[#dfe5dc] bg-white px-3.5 text-sm outline-none focus:border-moss disabled:bg-[#f3f4f0]; }
+  .textarea { @apply focus-ring mt-2 min-h-28 w-full rounded-xl border border-[#dfe5dc] bg-white px-3.5 py-3 text-sm leading-6 outline-none focus:border-moss; }
+  .primary-button { @apply focus-ring inline-flex h-10 items-center justify-center rounded-xl bg-forest px-4 text-sm font-semibold text-white hover:bg-[#123d30] disabled:cursor-wait disabled:opacity-60; }
+  .secondary-button { @apply focus-ring inline-flex h-10 items-center justify-center rounded-xl border border-[#dfe5dc] bg-white px-4 text-sm font-semibold text-[#536157] hover:bg-[#f6f7f2]; }
+}
